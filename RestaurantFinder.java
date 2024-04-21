@@ -27,20 +27,20 @@ public class RestaurantFinder {
 		// TODO Auto-generated method stub
 		try {
 			
-			URL url = new URL("https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/" + postcode);
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			URL url = new URL("https://uk.api.just-eat.io/discovery/uk/restaurants/enriched/bypostcode/" + postcode);  
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection(); //For Connection
 			conn.setRequestMethod("GET");
 			conn.connect();
 			
 			//Read response data into String
-			Scanner scanner = new Scanner(url.openStream());
+			Scanner scanner = new Scanner(url.openStream()); //Reading URL
 			StringBuilder response = new StringBuilder();
 			while(scanner.hasNext()) {
 				
-				response.append(scanner.nextLine());
+				response.append(scanner.nextLine()); //Appends the Lines from scanner to response
 				
 			}
-			scanner.close();
+			scanner.close(); //Scanner closed
 			
 			//Parse JSON response
 			JSONObject jsonResponse = new JSONObject(response.toString());
@@ -66,7 +66,7 @@ public class RestaurantFinder {
 				JSONObject rating = restaurant.getJSONObject("rating");
 				System.out.println("Rating: "+ rating.getDouble("starRating"));
 				JSONObject address = restaurant.getJSONObject("address");
-				System.out.println("Address: " + address.getString("city") + "," + address.getString("firstLine") + ", \nPostal Code: " + address.getString("postalCode"));
+				System.out.println("Address: " + address.getString("city") + "," + address.getString("firstLine") + ", \n\tPostal Code: " + address.getString("postalCode"));
 				
 			}
 			System.out.println("------------------------------------END---------------------------------------");
