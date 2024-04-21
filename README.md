@@ -2,8 +2,6 @@
 
 **Output of Take Away Restaurant Finder**
 
-Enter UK Postcode : 
-
 Below are list of UK PostCode 
 
 'CT12EH - BS14DJ - L40TH - NE97TY
@@ -14,7 +12,7 @@ BN11AE - CB74DL - LS27HY - G38AG
 
 PL40DW - B263QJ - DH45QZ - BT71NN' 
 
-NE97TY
+Enter UK Postcode of your choice: 
 
 ********************** 1 ************************************
 
