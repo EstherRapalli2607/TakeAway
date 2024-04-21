@@ -13,10 +13,11 @@ public class RestaurantFinder {
 		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter UK Postcode : \n Below are list of UK PostCode \n'CT12EH - BS14DJ - L40TH - NE97TY\r\n"
+		System.out.println("Below are list of UK PostCode \n'CT12EH - BS14DJ - L40TH - NE97TY\r\n"
 				+ "SW1A1AA - CF118AZ - M160RA - EH11RE\r\n"
 				+ "BN11AE - CB74DL - LS27HY - G38AG\r\n"
-				+ "PL40DW - B263QJ - DH45QZ - BT71NN' \n");
+				+ "PL40DW - B263QJ - DH45QZ - BT71NN' \n"
+				+ "Enter UK Postcode of your choice: ");
 		String postcode = sc.nextLine().trim();
 		sc.close();
 		fetchRestaurantData(postcode);
